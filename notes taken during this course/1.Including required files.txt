@@ -1,0 +1,52 @@
+1.Database.php :
+
+//filename ar class name same dibo. tahole subidha..
+
+<?php
+
+class Database
+
+{
+
+    public function __construct()
+    {
+
+    }
+
+}
+
+2.Session.php
+<?php
+
+class Session
+
+{
+
+
+    public function __construct()
+    {
+
+    }
+
+
+}
+
+3.User.php :
+//user jokhn login korbe tokhn tar session generate korte hbe and db connection o dte hbe..
+//tai ei 2ta file add kore nilam.......
+
+<?php
+include __DIR__ . 'Session.php';
+include __DIR__ . 'Database.php';
+
+class User
+
+{
+    private $db;
+    public function __construct()
+    {
+        $this->db = new Database();
+    }
+
+
+}

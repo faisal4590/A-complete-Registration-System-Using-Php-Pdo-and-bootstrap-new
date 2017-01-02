@@ -1,0 +1,297 @@
+<?php
+    include "includes/header.php";
+?>
+<link rel="stylesheet" href="includes/bootstrap.min.css">
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<div class="panel panel-info">
+    <div class="panel-heading text-center">
+        <h2>User Login</h2>
+    </div>
+
+
+    <div class="panel-body">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <form action="" method="post">
+                <!--
+                     This is bootstrap form template created by Optimized faisal.
+                     To use this form template, bootstrap and font-awesome must be include in the project and the custom
+                     css for form field must be loaded....
+                -->
+                <div class="form-group">
+                    <label for="fullname">Full name : </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i></span>
+                        <div class="icon-addon">
+                            <input class="form-control" type="text" name="name" placeholder="your full name" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username : </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <div class="icon-addon">
+                            <input class="form-control" type="text" name="uname" placeholder="your username" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password : </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+                        <div class="icon-addon">
+                            <input class="form-control" type="password" name="pwd" placeholder="your password" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="repeatPassword">Repeat Password : </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
+                        <div class="icon-addon">
+                            <input class="form-control" type="password" name="repeatpwd" placeholder="repeat password"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email : </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <div class="icon-addon">
+                            <input class="form-control" type="email" name="email" placeholder="your email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate">Your Birthdate : </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        <div class="icon-addon">
+                            <input class="form-control" type="date" name="birthdate" placeholder="your birthdate"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="gender">Your gender : </label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="o4" value="">
+                            <span class="cr"><i class="cr-icon fa fa-male"></i></span>
+                            <i></i>
+                            Male
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="o4" value="" checked>
+                            <span class="cr"><i class="cr-icon fa fa-female"></i></span>
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="yourCity">Your city : </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"> <i class="glyphicon glyphicon-globe"></i></span>
+                        <div class="icon-addon">
+                            <select class="form-control" required title="your current city">
+                                <option class="hidden">your current location</option>
+                                <option class="text-info">Dhaka</option>
+                                <option class="text-info">Chittagong</option>
+                                <option class="text-info">Rajshahi</option>
+                                <option class="text-info">Khulna</option>
+                                <option class="text-info">Barishal</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Your mobile number : </label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <div class="icon-addon">
+                            <input class="form-control" type="tel" name="mobile"
+                                   placeholder="your mobile number(01*********)"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-success" name="submit">Login</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<?php
+    include "includes/footer.php";
+?>
+
+
+/////necessary styling for our form/////////
+style.css :
+
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+/*This url must be loaded otherwise glyphicon er icon browser e show kore na ;-( */
+
+/*Form with glyphicon icon starts here*/
+.center-block {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-group .icon-addon .form-control {
+    border-radius: 0;
+}
+
+.icon-addon {
+    position: relative;
+    color: #555;
+    display: block;
+}
+
+.icon-addon:after,
+.icon-addon:before {
+    display: table;
+    content: " ";
+}
+
+.icon-addon:after {
+    clear: both;
+}
+
+.icon-addon.addon-md .glyphicon,
+.icon-addon .glyphicon,
+.icon-addon.addon-md .fa,
+.icon-addon .fa {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    font-size: 14px;
+    width: 20px;
+    margin-left: -2.5px;
+    text-align: center;
+    padding: 10px 0;
+    top: 1px
+}
+
+.icon-addon.addon-lg .form-control {
+    line-height: 1.33;
+    height: 46px;
+    font-size: 18px;
+    padding: 10px 16px 10px 40px;
+}
+
+.icon-addon.addon-sm .form-control {
+    height: 30px;
+    padding: 5px 10px 5px 28px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.icon-addon.addon-lg .fa,
+.icon-addon.addon-lg .glyphicon {
+    font-size: 18px;
+    margin-left: 0;
+    left: 11px;
+    top: 4px;
+}
+
+.icon-addon.addon-md .form-control,
+.icon-addon .form-control {
+    padding-left: 30px;
+    float: left;
+    font-weight: normal;
+}
+
+.icon-addon.addon-sm .fa,
+.icon-addon.addon-sm .glyphicon {
+    margin-left: 0;
+    font-size: 12px;
+    left: 5px;
+    top: -1px
+}
+
+.icon-addon .form-control:focus + .glyphicon,
+.icon-addon:hover .glyphicon,
+.icon-addon .form-control:focus + .fa,
+.icon-addon:hover .fa {
+    color: #2580db;
+}
+
+/*Animated radio button style starts here*/
+.checkbox label:after,
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .7s ease-out;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+/*Animated radio button style ends here*/
